@@ -56,9 +56,9 @@ from azure.storage.filedatalake import (
 
 
 
-def upload_download_sample(filesystem_client,SOURCE_FILE):
+def upload_download_sample(filesystem_client,mySOURCE_FILE):
     # create a file before writing content to it
-    file_name = "testfile"
+    file_name = mySOURCE_FILE
     print("Creating a file named '{}'.".format(file_name))
     # [START create_file]
     file_client = filesystem_client.get_file_client(file_name)
@@ -66,7 +66,7 @@ def upload_download_sample(filesystem_client,SOURCE_FILE):
     # [END create_file]
 
     # prepare the file content with 4KB of random data
-    with open(SOURCE_FILE, "rb") as data:
+    with open(mySOURCE_FILE, "rb") as data:
         file_client.append_data(data,offset=0)
         #file_client.flush_data(len(data))
     #
@@ -107,7 +107,7 @@ def upload_download_sample(filesystem_client,SOURCE_FILE):
     # [END rename_file]
 
     # download the renamed file in to local file
-    with open(SOURCE_FILE, 'wb') as stream:
+    with open(mySOURCE_FILE, 'wb') as stream:
         download = new_client.download_file()
         download.readinto(stream)
 
@@ -145,8 +145,8 @@ def run():
     list_files,count = list_dir('./',list_files,count)
     # invoke the sample code
     while (count):
-        SOURCE_FILE = list_files[count-1]
-        upload_download_sample(filesystem_client,SOURCE_FILE)
+        mySOURCE_FILE = list_files[count-1]
+        upload_download_sample(filesystem_client,mySOURCE_FILE)
         count-=1
 
 
