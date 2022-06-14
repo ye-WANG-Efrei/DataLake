@@ -11,11 +11,10 @@ FILE: datalake_samples_upload_download.py
 DESCRIPTION:
     This sample demonstrates:
     * Set up a file system
-    * Create file
     * Append data to the file
     * Flush data to the file
     * Get file properties
-    * Download the uploaded data
+    * the uploaded data
     * Delete file system
 USAGE:
     python datalake_samples_upload_download.py
@@ -71,7 +70,7 @@ def run():
     while(count):
         try:
             with open(list_csv[count-1], "rb") as data:
-                blob_client.upload_blob(data)
+                service_client.upload_blob(data)
         finally:
              #clean up the demo filesystem
              service_client.delete_file_system()
