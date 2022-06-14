@@ -28,8 +28,7 @@ import os
 import random
 
 
-list_files=[]
-count=0
+
 def list_dir(file_dir,list_files,count):
     dir_list = os.listdir(file_dir)
     #print(dir_list)
@@ -48,7 +47,7 @@ def list_dir(file_dir,list_files,count):
 
     return list_files,count
 
-list_files,count = list_dir('./',list_files,count)
+
 
 
 from azure.storage.filedatalake import (
@@ -141,7 +140,9 @@ def run():
 
     # create the filesystem
     filesystem_client = service_client.create_file_system(file_system=fs_name)
-
+    list_files=[]
+    count=0
+    list_files,count = list_dir('./',list_files,count)
     # invoke the sample code
     while (count):
         SOURCE_FILE = list_files[count-1]
