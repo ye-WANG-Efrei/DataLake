@@ -1,5 +1,5 @@
 {
-	"name": "Outputdataset",
+	"name": "InputdatasetAMAZON",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
@@ -10,8 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "demo.csv",
-				"folderPath": "output",
+				"fileName": "AMAZON.csv",
 				"fileSystem": "stocks"
 			},
 			"columnDelimiter": ",",
