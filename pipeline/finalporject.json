@@ -1,5 +1,5 @@
 {
-	"name": "finalporjec",
+	"name": "finalporject",
 	"properties": {
 		"description": "export-merge",
 		"activities": [
@@ -83,27 +83,7 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
-								"sink": {
-									"type": "DelimitedTextSink",
-									"storeSettings": {
-										"type": "AzureBlobFSWriteSettings",
-										"copyBehavior": "MergeFiles"
-									},
-									"formatSettings": {
-										"type": "DelimitedTextWriteSettings",
-										"quoteAllText": true,
-										"fileExtension": ".txt"
-									}
-								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
+								"enableStaging": false
 							},
 							"inputs": [
 								{
@@ -115,12 +95,6 @@
 											"type": "Expression"
 										}
 									}
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "Outputdatasetsmerge",
-									"type": "DatasetReference"
 								}
 							]
 						}
