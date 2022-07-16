@@ -1,0 +1,9 @@
+{
+	"name": "yeWANGstocksDF",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c407645e-91fa-4564-b0d1-a60edf9e2ef7",
+		"tenantId": "413600cf-bd4e-4c7c-8a61-69e73cddf731"
+	}
+}
