@@ -20,6 +20,9 @@
 		"AzureSqlDatabase2_connectionString": {
 			"value": ""
 		},
+		"AzureDatabricksJepan_accessToken": {
+			"value": ""
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://yewangstocks.dfs.core.windows.net/"
 		},

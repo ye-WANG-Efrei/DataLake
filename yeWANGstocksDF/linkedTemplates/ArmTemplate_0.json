@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase2'"
 		},
+		"AzureDatabricksJepan_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksJepan'"
+		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://yewangstocks.dfs.core.windows.net/"
@@ -79,7 +83,7 @@
 						"type": "SecureString",
 						"value": "[parameters('AzureDatabricks1_accessToken')]"
 					},
-					"existingClusterId": "0716-204706-va56i340"
+					"existingClusterId": "0718-161122-5thqmp6o"
 				}
 			},
 			"dependsOn": []
@@ -106,6 +110,24 @@
 				"type": "AzureSqlDatabase",
 				"typeProperties": {
 					"connectionString": "[parameters('AzureSqlDatabase2_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureDatabricksJepan')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureDatabricks",
+				"typeProperties": {
+					"domain": "https://adb-1188749644456526.6.azuredatabricks.net",
+					"accessToken": {
+						"type": "SecureString",
+						"value": "[parameters('AzureDatabricksJepan_accessToken')]"
+					},
+					"existingClusterId": "0718-200651-5pt9on5d"
 				}
 			},
 			"dependsOn": []
@@ -1026,10 +1048,10 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Users/ye.wang.20182131@efrei.net/2022-07-18 - DBFS Example"
+							"notebookPath": "/Users/ye.wang.20182131@efrei.net/datalake"
 						},
 						"linkedServiceName": {
-							"referenceName": "AzureDatabricks1",
+							"referenceName": "AzureDatabricksJepan",
 							"type": "LinkedServiceReference"
 						}
 					}
@@ -1043,7 +1065,7 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/sets')]",
 				"[concat(variables('factoryId'), '/datasets/Outputdataset')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricks1')]",
+				"[concat(variables('factoryId'), '/linkedServices/AzureDatabricksJepan')]",
 				"[concat(variables('factoryId'), '/datasets/AzureSqlTable2')]"
 			]
 		}
