@@ -306,10 +306,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/ye.wang.20182131@efrei.net/2022-07-18 - DBFS Example"
+					"notebookPath": "/Users/ye.wang.20182131@efrei.net/datalake"
 				},
 				"linkedServiceName": {
-					"referenceName": "AzureDatabricks1",
+					"referenceName": "AzureDatabricksJepan",
 					"type": "LinkedServiceReference"
 				}
 			}
