@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "datalackPJ",
 	"properties": {
 		"activities": [
 			{
@@ -94,6 +94,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -305,7 +306,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/ye.wang.20182131@efrei.net/DBsforstock"
+					"notebookPath": "/Users/ye.wang.20182131@efrei.net/2022-07-18 - DBFS Example"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
