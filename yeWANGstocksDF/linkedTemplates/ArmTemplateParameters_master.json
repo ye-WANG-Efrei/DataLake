@@ -14,13 +14,13 @@
 		"AzureDatabricks1_accessToken": {
 			"value": ""
 		},
+		"AzureDatabricksJepan_accessToken": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
 		"AzureSqlDatabase2_connectionString": {
-			"value": ""
-		},
-		"AzureDatabricksJepan_accessToken": {
 			"value": ""
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
