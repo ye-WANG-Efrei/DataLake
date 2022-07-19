@@ -1048,7 +1048,10 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Users/ye.wang.20182131@efrei.net/datalake"
+							"notebookPath": "/Users/ye.wang.20182131@efrei.net/datalake",
+							"baseParameters": {
+								"constant": "7"
+							}
 						},
 						"linkedServiceName": {
 							"referenceName": "AzureDatabricksJepan",
